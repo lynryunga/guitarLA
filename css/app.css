@@ -20,13 +20,13 @@ img {
     max-width: 100%;
 }
 
-[class*="__contenedor"] {
+[class*="contenedor"] {
     max-width: 120rem;
     margin: 0 auto;
     width: 95%;
 }
 
-[class*="__heading"] {
+[class*="heading"] {
     font-size: 4rem;
     text-align: center;
     font-weight: 900;
@@ -162,6 +162,45 @@ img {
     background-color: var(--primary);
 }
 
+.producto__formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.producto__label {
+    font-size: 2.2rem;
+    margin-right: 1rem;
+}
+
+.producto__cantidad {
+    border: 2px solid var(--primary);
+    text-align: center;
+}
+.producto__cantidad:focus-visible {
+    outline: 2px solid var(--primary);
+    border: none;
+    padding: .6rem;
+}
+
+.producto__agregar-carrito {
+    margin-top: 3rem;
+    display: block;
+    background-color: var(--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+    padding: 2rem 5rem;
+    color: var(--blanco);
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: backgroun-color .3s ease-in;
+}
+.producto__agregar-carrito:hover {
+    background-color: var(--negro);
+    cursor: pointer;
+}
+
 .productos__grid {
     display: grid;
     gap: 4rem;
@@ -289,8 +328,15 @@ img {
     .blog__grid {
         grid-template-columns: repeat(4, 1fr);
     }
+    .blog__grid--pagina {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
+.entrada {
+    max-width: 80rem;
+    margin: 0 auto;
+}
 .entrada__contenido {
     padding: 2rem;
 }
@@ -324,4 +370,65 @@ img {
 .entrada__enlace:hover {
      background-color: var(--primary);
      color: var(--blanco);
+}
+
+.entrada__texto {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: 1.6rem;
+}
+
+.footer {
+    margin-top: 5rem;
+    background-color: var(--negro);
+    padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .footer__contenido {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .footer__nav{
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+.footer__enlace {
+    font-size: 2.8rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer__enlace:hover {
+    color: var(--primary);
+}
+
+.footer__copyright {
+    font-size: 2rem;
+    color: var(--blanco);
+    text-align: center;
+    font-weight: 700;
+}
+
+.nosotros__grid {
+    display: grid;
+    gap: 4rem;
+}
+@media (min-width: 768px) {
+    .nosotros__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        align-items: center;
+    }
 }
